@@ -3,6 +3,8 @@ import hoennCard from "../../assets/images/verif/trainer_card_hoenn.svg";
 import kantoCard from "../../assets/images/verif/trainer_card_kanto.svg";
 import sinnohCard from "../../assets/images/verif/trainer_card_sinnoh.svg";
 import unysCard from "../../assets/images/verif/trainer_card_unys.svg";
+import jadeMusicFile from "../../assets/music/jade.mp3";
+import gameWindow from "../../assets/images/hud/game_window.svg";
 import Notebook from "../../components/Notebook/Button/NotebookButton";
 import CarouselOverlay from "../../components/Notebook/Licences/Licences";
 import Modal from "../../components/Notebook/Modal/NotebookModal";
@@ -121,7 +123,7 @@ function Game() {
 		}
 
 		if (!window.jadeMusic) {
-			const music = new Audio("src/assets/music/jade.mp3");
+			const music = new Audio(jadeMusicFile);
 			music.loop = true;
 			window.jadeMusic = music;
 		}
@@ -235,7 +237,7 @@ function Game() {
 					<div id="trainer">{selectedTrainer}</div>
 					<img
 						id="window_sill"
-						src="src/assets/images/hud/game_window.svg"
+						src={gameWindow}
 						alt="fenêtre de jeu"
 					/>
 					<p id="counter">{currentIndex} / 10</p>

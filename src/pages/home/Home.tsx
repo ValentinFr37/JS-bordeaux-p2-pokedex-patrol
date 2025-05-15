@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import "./Home.css";
 
+
 function Home() {
 	const [isTransitioning, setIsTransitioning] = useState(false);
 	const navigate = useNavigate();
